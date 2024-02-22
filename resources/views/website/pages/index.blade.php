@@ -28,8 +28,7 @@
         <div class="container" style="padding-bottom:70px;">
 
 
-            <h2>IF YOU GOT ANY QUESTIONS<br>
-                PLEASE DO NOT HESITATE TO SEND US A MESSAGE.</h2>
+            <h2>Please fill in the below information</h2>
 
             <!-- First Form -->
             <div id ="emptydiv">

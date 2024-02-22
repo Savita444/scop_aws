@@ -24,16 +24,16 @@
                                     <a href="{{ url('/') }}">Home</a>
                                 </li>
 
-                                <li>
+                                {{-- <li>
                                     <a href="{{ url('about') }}">About Us</a>
-                                </li>
+                                </li> --}}
                                 {{-- <li>
                                     <a href="{{ url('events') }}">Events</a>
                                 </li> --}}
 
-                                <li>
+                                {{-- <li>
                                     <a href="{{ url('contact-us') }}">Contact Us</a>
-                                </li>
+                                </li> --}}
 
                                 {{-- <li>
                                     <a href="gallery.html">Gallery</a>
