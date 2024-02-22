@@ -100,7 +100,7 @@
                     <div class="col-xs-12 submit-button" style="float:right; width:auto;">
                         <!-- Change the type to button -->
                         <button type="submit" class="btn2" id="submitFirstForm"
-                            style="border:none; margin: 20px 0 0 0">Send Message</button>
+                            style="border:none; margin: 20px 0 0 0">Save</button>
                     </div>
                 </form>
             </div>

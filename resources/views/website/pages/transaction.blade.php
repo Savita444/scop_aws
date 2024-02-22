@@ -28,7 +28,7 @@
         <div class="container" style="padding-bottom:70px;">
 
             <!-- First Form -->
-            <h2>Please fill in the below information</h2>
+            <h2 style="display:flex; text-align:center;">Please fill in the below information</h2>
                 
             <form class="forms-sample" action="{{ route('second-form') }}" method="POST"
                 enctype="multipart/form-data">
