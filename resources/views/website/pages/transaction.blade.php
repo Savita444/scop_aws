@@ -51,19 +51,6 @@
                 </div>
                 </div>
                 </div>
-                {{-- <div class="col-md-12 content-display " style="display: flex; justify-content-center; margin:20px">
-                    <input type="text" name="transaction_id" value="" size="40" class=""
-                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Id">
-                </div> --}}
-                <div class="col-md-12  content-display"><span id="number-validate" class="red-text"></span>
-
-                    @if ($errors->has('transaction_id'))
-                        <span class="red-text">
-                            <?php echo $errors->first('transaction_id', ':message'); ?>
-                        </span>
-                    @endif
-
-                </div>
 
                 {{-- <input type="text" name="transaction_id" id="transaction_id" placeholder="Transaction Id" value=""> --}}
                 <div class="col-xs-12 submit-button" style="float:right; width:auto;">
