@@ -95,7 +95,48 @@ class ContactUsController extends Controller
         }
     }
     
-    public function updatesecondSecondForm(Request $request)
+//     public function updatesecondSecondForm(Request $request)
+// {
+//     $rules = [
+//         'transaction_id' => 'required',
+//     ];
+
+//     $messages = [
+//         'transaction_id.required' => 'Please enter transaction number.',
+//     ];
+
+//     try {
+//         $validation = Validator::make($request->all(), $rules, $messages);
+
+//         if ($validation->fails()) {
+//             return redirect()->back()
+//                 ->withErrors($validation)
+//                 ->withInput();
+//         }
+
+//         $updated = ContactUs::where('id', $request->user_id)->update([
+//             'transaction_id' => $request->input('transaction_id'),
+//         ]);
+
+//         if ($updated) {
+//             $msg = 'Information saved successfully';
+//             $status = 'success';
+//         } else {
+//             $msg = 'Failed to update information';
+//             $status = 'error';
+//         }
+        
+
+//         return redirect('/')
+//             ->with(compact('msg', 'status'));
+
+//     } catch (Exception $e) {
+//         return redirect()->back()
+//             ->withInput()
+//             ->with(['msg' => $e->getMessage(), 'status' => 'error']);
+//     }
+// }
+public function updatesecondSecondForm(Request $request)
 {
     $rules = [
         'transaction_id' => 'required',
@@ -117,35 +158,13 @@ class ContactUsController extends Controller
         $updated = ContactUs::where('id', $request->user_id)->update([
             'transaction_id' => $request->input('transaction_id'),
         ]);
-
-
-$msg = 'Information saved successfully';
-$status = 'success';
-        if($updated)
-        {
-          dd($msg);
-die();
-            $msg = $msg;
-            $status = $status;
-            if($status=='success') {
-                return redirect('/')->with(compact('msg','status'));
-            }
-            else {
-                return redirect('/')->withInput()->with(compact('msg','status'));
-            }
-        }
-
-        // if ($updated) {
-        //     $msg = 'Information saved successfully';
-        //     $status = 'success';
-        // } else {
-        //     $msg = 'Failed to update information';
-        //     $status = 'error';
-        // }
         
-
-        // return redirect('/')
-        //     ->with(compact('msg', 'status'));
+        if ($updated !== false && $updated > 0) {
+            Session::flash('success_message', 'Application Form submitted successfully!');
+            return redirect('/')->with('status', 'success');
+        } else {
+            return redirect('/')->withInput()->with('status', 'error');
+        }
 
     } catch (Exception $e) {
         return redirect()->back()

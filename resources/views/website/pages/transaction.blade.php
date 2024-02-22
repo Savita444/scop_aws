@@ -29,27 +29,7 @@
 
             <!-- First Form -->
             <h2>Please fill in the below information</h2>
-                @if (Session::get('status') == 'success')
-                <div class="col-12 grid-margin">
-                    <div class="alert alert-success" id="success-alert">
-                        <button type="button" class="close" data-dismiss="alert">x</button>
-                        <strong> <span id="data_to_show">
-                                {{ Session::get('msg') }}
-                            </span> </strong>
-                    </div>
-                </div>
-            @endif
-
-            @if (Session::get('status') == 'error')
-                <div class="col-12 grid-margin">
-                    <div class="alert alert-danger" id="danger-alert">
-                        <button type="button" class="close" data-dismiss="alert">x</button>
-                        <strong> <span id="data_to_show">
-                                {!! session('msg') !!}
-                            </span> </strong>
-                    </div>
-                </div>
-            @endif
+                
             <form class="forms-sample" action="{{ route('second-form') }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
@@ -79,7 +59,11 @@
                     <button type="submit" class="btn2" id="submitSecondForm"
                         style="border:none; margin: 20px 0 0 0">Submit</button>
                 </div>
-
+                @if(Session::has('success_message'))
+                <script>
+                    alert("{{ Session::get('success_message') }}");
+                </script>
+            @endif
                 
             </form>
 
