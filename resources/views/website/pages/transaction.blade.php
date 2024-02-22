@@ -41,7 +41,7 @@
                 <div class="col-md-12 content-display " style="display: flex; justify-content-center; margin:0px">
                 <div class="col-md-6">
                     <input type="text" name="transaction_id" value="" size="40" class=""
-                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Id">
+                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Number">
                     <span id="number-validate" class="red-text"></span>
                     @if ($errors->has('transaction_id'))
                         <span class="red-text">
