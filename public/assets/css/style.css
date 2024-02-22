@@ -29169,6 +29169,9 @@ div.tagsinput span.tag a {
     width: 60%;
     margin: auto;
   }
+  .auth .login-half-bg {
+   display: none;
+  }
 }
 
 .auth .brand-logo {
@@ -29767,4 +29770,7 @@ table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td
   .modal-dialog{
     max-width: 100% !important;
   }
+  .auth .login-half-bg {
+    display: none;
+   }
 }
