@@ -119,10 +119,10 @@ class ContactUsController extends Controller
         ]);
 
         if ($updated) {
-            $msg = 'Information saved successfully';
+            $msg = 'Contact Us Information submitted successfully!';
             $status = 'success';
         } else {
-            $msg = 'Failed to update information';
+            $msg = 'Failed to add Contact Us Information submitted';
             $status = 'error';
         }
         

@@ -26,12 +26,33 @@
 
     <section id="about-sec">
         <div class="container" style="padding-bottom:70px;">
+            {{-- <button type="button" class="close" data-dismiss="alert">x</button>
             @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
-        @endif
+        @endif --}}
+        @if (Session::get('status') == 'success')
+        <div class="col-12 grid-margin">
+            <div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong> <span id="data_to_show">
+                        {{ Session::get('msg') }}
+                    </span> </strong>
+            </div>
+        </div>
+    @endif
 
+    @if (Session::get('status') == 'error')
+        <div class="col-12 grid-margin">
+            <div class="alert alert-danger" id="danger-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong> <span id="data_to_show">
+                        {!! session('msg') !!}
+                    </span> </strong>
+            </div>
+        </div>
+    @endif
             <h2>Please fill in the below information</h2>
 
             <!-- First Form -->
