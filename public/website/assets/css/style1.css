@@ -1942,7 +1942,7 @@ element.style {
 
 @media (min-width:0px) and (max-width:768px){
     .form_wrapper {
-        width: 80% !important;
+        width: 80% ;
     }
     .contact-img-web{
         display: block;
@@ -1950,7 +1950,9 @@ element.style {
     .contact-img-mob{
         display: none;
     }
-    
+    .qr_img{
+        width: 80% !important;
+    }
 }
 @media (min-width:768px) and (max-width:1920px){
     .contact-img-mob{
@@ -1963,4 +1965,7 @@ element.style {
 }
 .red-text{
     color: red !important;
+}
+.qr_img{
+    width: 20%;
 }

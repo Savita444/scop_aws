@@ -28,29 +28,41 @@
         <div class="container" style="padding-bottom:70px;">
 
             <!-- First Form -->
-            <h2 style="display:flex; text-align:center;">Please fill in the below information</h2>
-                
-            <form class="forms-sample" action="{{ route('second-form') }}" method="POST"
-                enctype="multipart/form-data">
+            <h2 style="display:flex; text-align:center;justify-content: center;">Please fill in the below information</h2>
+
+            <form class="forms-sample" action="{{ route('second-form') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <!-- Input fields for the second form -->
-                <input type="hidden" name="user_id" value="{{ $add_contact}}">
+                <input type="hidden" name="user_id" value="{{ $add_contact }}">
+                <div class="con-form clearfix">
                 <div class="content-display">
-                    <img src="{{ asset('website/assets/images/qrcode.png') }}" class="img-fluid" style="width: 20%;">
+                    <img src="{{ asset('website/assets/images/qrcode.png') }}" class="img-fluid qr_img">
                 </div><br>
-
-
-                <div class="col-md-12 content-display" style="display: flex; justify-content-center;">
+                <div class="col-md-12 content-display " style="display: flex; justify-content-center; margin:0px">
+                <div class="col-md-6">
                     <input type="text" name="transaction_id" value="" size="40" class=""
-                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Id"></div>
-<div class="col-md-12  content-display"><span id="number-validate" class="red-text"></span>
-                    
+                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Id">
+                    <span id="number-validate" class="red-text"></span>
                     @if ($errors->has('transaction_id'))
                         <span class="red-text">
                             <?php echo $errors->first('transaction_id', ':message'); ?>
                         </span>
                     @endif
-                
+                </div>
+                </div>
+                </div>
+                {{-- <div class="col-md-12 content-display " style="display: flex; justify-content-center; margin:20px">
+                    <input type="text" name="transaction_id" value="" size="40" class=""
+                        id="transaction_id" aria-required="true" aria-invalid="false" placeholder="Transaction Id">
+                </div> --}}
+                <div class="col-md-12  content-display"><span id="number-validate" class="red-text"></span>
+
+                    @if ($errors->has('transaction_id'))
+                        <span class="red-text">
+                            <?php echo $errors->first('transaction_id', ':message'); ?>
+                        </span>
+                    @endif
+
                 </div>
 
                 {{-- <input type="text" name="transaction_id" id="transaction_id" placeholder="Transaction Id" value=""> --}}
@@ -60,11 +72,13 @@
                         style="border:none; margin: 20px 0 0 0">Submit</button>
                 </div>
                 @if(Session::has('success_message'))
-                <script>
-                    alert("{{ Session::get('success_message') }}");
-                </script>
+                <div class="alert alert-success">
+                    {{ Session::get('success_message') }}
+                </div>
             @endif
-                
+            
+        
+
             </form>
 
 
@@ -115,7 +129,7 @@
 
         </div>
     </section>
-    <div class="row google-maps mt-4"  style="margin-right: 0px !important;">
+    <div class="row google-maps mt-4" style="margin-right: 0px !important;">
 
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.6235047176656!2d73.77331941491543!3d19.982329686574435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebaead9a4d49%3A0xfd6c10f8929d7902!2sSUMAGO%20INFOTECH!5e0!3m2!1sen!2sin!4v1595588446730!5m2!1sen!2sin"
@@ -126,5 +140,4 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
     <script></script>
-   
 @endsection

@@ -26,7 +26,11 @@
 
     <section id="about-sec">
         <div class="container" style="padding-bottom:70px;">
-
+            @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 
             <h2>Please fill in the below information</h2>
 

@@ -1506,6 +1506,9 @@ element.style {
 }
 
 @media (min-width:0px) and (max-width:768px){
+    .qr_img{
+        width: 80% !important;
+    }
     .form_wrapper {
         width: 80% !important;
     }
@@ -1524,4 +1527,7 @@ element.style {
     .contact-img-mob{
         display: block;
     }
+}
+.qr_img{
+    width: 20%;
 }
