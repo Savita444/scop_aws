@@ -46,8 +46,8 @@ class ContactUsController extends Controller
             ];
         $messages = [   
             'full_name.required' => 'Please Enter Full Name.',
-            'contact_number.required' => 'Please Enter Mobile Number.',
-            'contact_number.regex' => 'Please Enter a Valid Mobile Number.',
+            'contact_number.required' => 'Please Enter Contact Number.',
+            'contact_number.regex' => 'Please Enter a Valid Contact Number.',
             'whats_app_number.required' => 'Please Enter Whats App Number.',
             'whats_app_number.regex' => 'Please Enter a Valid Whats App Number.',
             'education.required' => 'Please Enter Education.',
