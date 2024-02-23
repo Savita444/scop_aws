@@ -119,10 +119,10 @@ class ContactUsController extends Controller
         ]);
 
         if ($updated) {
-            $msg = 'Contact Us Information submitted successfully!';
+            $msg = 'Your registration for the bootcamp successfully!!';
             $status = 'success';
         } else {
-            $msg = 'Failed to add Contact Us Information submitted';
+            $msg = 'Failed to Your registration for the bootcamp.';
             $status = 'error';
         }
         
