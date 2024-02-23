@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <meta name="robots" content="index,follow">
     <link rel="icon" type="image/x-icon" href="./public/website/assets/images/logo.jpg" >
-    <title>SCOPE Project Competition</title>
+    <title>Bootcamp</title>
 
     <link href="{{ asset('website/assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('website/assets/css/animate.css') }}" rel="stylesheet">
