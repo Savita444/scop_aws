@@ -42,7 +42,13 @@
                                                         <td>{{ strip_tags($item->contact_number) }}</td>
                                                         <td>{{ strip_tags($item->whats_app_number) }}</td>
                                                         <td>{{ strip_tags($item->education) }}</td>
-                                                        <td>{{ strip_tags($item->transaction_id) }}</td>
+                                                        <td>
+                                                            @if ($item->transaction_id == 'null')
+                                                            @else
+                                                            {{ strip_tags($item->transaction_id) }}
+                                                            @endif
+                                                        </td>
+                                                        {{-- <td>{{ strip_tags($item->transaction_id) }}</td> --}}
                                                         <!-- <td>
                                                             <div class="d-flex">
                                                                 <a data-id="{{ $item->id }}"
