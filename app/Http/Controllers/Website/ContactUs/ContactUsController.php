@@ -127,7 +127,7 @@ class ContactUsController extends Controller
         }
         
         // Session::flash('success_message', 'Contact Us submitted successfully!');
-        $request->session()->flash('success', 'Contact Us Information submitted successfully!');
+        $request->session()->flash('success', 'Your registration for the bootcamp successfully!!');
         return redirect('/')
             ->with(compact('msg', 'status'));
 
