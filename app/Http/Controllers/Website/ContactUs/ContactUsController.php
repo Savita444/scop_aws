@@ -98,11 +98,14 @@ class ContactUsController extends Controller
     public function updatesecondSecondForm(Request $request)
 {
     $rules = [
-        'transaction_id' => 'required',
+        // 'transaction_id' => 'required',
+        'transaction_id' => 'required|regex:/^T\d{22}$/',
     ];
 
     $messages = [
-        'transaction_id.required' => 'Please enter transaction number.',
+        // 'transaction_id.required' => 'Please enter transaction number.',
+        'transaction_id.required' => 'Please enter a valid transaction number.',
+        'transaction_id.regex' => 'Transaction number must start with "T" followed by 22 digits.',
     ];
 
     try {
